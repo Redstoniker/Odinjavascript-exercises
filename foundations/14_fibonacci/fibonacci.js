@@ -1,5 +1,12 @@
-const fibonacci = function() {
-
+const fibonacci = function(position) {
+    let fibonacciArr = [0, 1, 1];
+    for (let index = 1; index < position; index++) {
+        fibonacciArr.push(fibonacciArr[fibonacciArr.length-1]+fibonacciArr[fibonacciArr.length-2])
+    }
+    if (position >= 0) {
+        return fibonacciArr[position];        
+    }
+    else {return "OOPS";}
 };
 
 // Do not edit below this line
